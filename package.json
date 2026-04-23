@@ -1,0 +1,19 @@
+{
+  "name": "azure-node-counter-app",
+  "version": "1.0.0",
+  "description": "Basic counter app for Azure Web App with Node 22 LTS",
+  "main": "server.js",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["azure", "nodejs", "counter"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
