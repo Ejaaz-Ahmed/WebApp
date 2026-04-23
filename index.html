@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic HTML Web App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        color: #222;
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .app {
+        width: min(520px, 90%);
+        background: #fff;
+        border-radius: 16px;
+        padding: 28px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+      }
+      h1 {
+        margin-top: 0;
+        color: #1f3a6b;
+      }
+      p {
+        line-height: 1.65;
+      }
+      .counter {
+        margin: 24px 0;
+        display: grid;
+        gap: 12px;
+      }
+      .counter button {
+        padding: 12px 18px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background: #2b6cb0;
+        color: #fff;
+      }
+      .counter button:hover {
+        background: #1e4f8d;
+      }
+      .counter span {
+        font-size: 1.25rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app">
+      <h1>Basic HTML Web App</h1>
+      <p>Use the buttons below to increment or reset the counter. This example includes basic HTML, CSS, and JavaScript.</p>
+      <div class="counter">
+        <button id="decrementBtn">- Decrease</button>
+        <span id="countValue">0</span>
+        <button id="incrementBtn">+ Increase</button>
+      </div>
+      <button id="resetBtn">Reset</button>
+    </main>
+
+    <script>
+      const countValue = document.getElementById('countValue');
+      const decrementBtn = document.getElementById('decrementBtn');
+      const incrementBtn = document.getElementById('incrementBtn');
+      const resetBtn = document.getElementById('resetBtn');
+
+      let count = 0;
+
+      function updateDisplay() {
+        countValue.textContent = count;
+      }
+
+      decrementBtn.addEventListener('click', () => {
+        count -= 1;
+        updateDisplay();
+      });
+
+      incrementBtn.addEventListener('click', () => {
+        count += 1;
+        updateDisplay();
+      });
+
+      resetBtn.addEventListener('click', () => {
+        count = 0;
+        updateDisplay();
+      });
+    </script>
+  </body>
+</html>
